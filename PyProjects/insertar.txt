@@ -1,0 +1,12 @@
+create table alumno(nombre varchar(30), apellidos varchar(30), pais varchar(15), estado varchar(20), ciudad varchar(30), calle varchar (30), numero  varchar(10), boleta varchar(14), codigoPostal varchar(20));
+
+insert into alumno values ('Juan', 'García', 'México', 'Tlaxcala', 'Tlaxcala de Xicohténcatl', 'Avenida Reforma', '123', 'B12345', '90000');
+insert into alumno values ('María', 'Lopez', 'España', 'Madrid', 'Madrid', 'Calle Mayor', '456', 'B67890', '28001');
+insert into alumno values (‘David', 'Smith', 'Estados Unidos', 'California', 'Los Angeles', 'Sunset Boulevard', '789', 'B54321', '90001');
+insert into alumno values ('Ana', 'Martínez', 'Argentina', 'Buenos Aires', 'CABA', 'Avenida Corrientes', '101', 'B98765', '1000');
+insert into alumno values ('Alex', 'Wong', 'China', 'Shanghai', 'Shanghai', 'Nanjing Road', '321', 'B24680', '200001');
+insert into alumno values ('Elena', 'Ramos', 'España', 'Valencia', 'Valencia', 'Calle Colón', '654', 'B13579', '46004');
+insert into alumno values ('Mohammed', 'Ali', 'Egipto', 'Cairo', 'El Cairo', 'Tahrir Square', '987', 'B75310', '12345');
+insert into alumno values ('Sophie', 'Dupont', 'Francia', 'Ile-de-France', 'París', 'Champs-Elysees', '246', 'B11223', '75008');
+insert into alumno values ('Rajesh', 'Patel', 'India', 'Maharashtra', 'Mumbai', 'Linking Road', '555', 'B36912', '400050');
+insert into alumno values ('Olga', 'Ivanova', 'Rusia', 'Moscu', 'Moscu', 'Tverskaya Street', '777', 'B88844', '125009');
