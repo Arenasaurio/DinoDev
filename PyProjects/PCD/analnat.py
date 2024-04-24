@@ -76,4 +76,5 @@ covarianza.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natilidad2k1
 #pega tus graficos luis , no se registro ala mejor por eso no se ve
 
 #luis comio pito aqui
-#ya se me
+#ya se me antojo xddd
+#ya no tiene con quien jugar
