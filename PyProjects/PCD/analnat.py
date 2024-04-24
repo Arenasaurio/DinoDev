@@ -1,7 +1,10 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-datosnat = pd.read_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natilidad2k18.csv")
+
+datosnat = pd.read_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natalidad2k18.csv")
 media1=datosnat['ent_resid'].mean()
 moda1=datosnat['ent_resid'].mode()
 mediana1=datosnat['ent_resid'].median()
@@ -65,16 +68,10 @@ meduniv = {
 }
 
 df1 = pd.DataFrame(meduniv, index=['ent_resid', 'ent_ocurr', 'sexo', 'edad_madn', 'edad_padn', 'ano_nac', 'mes_nac', 'escol_mad', 'escol_pad'])
-df1.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natilidad2k18_medidasUniv.csv")
+df1.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natalidad2k18_medidasUniv.csv")
 
 variables = ['ent_resid', 'ent_ocurr', 'sexo', 'edad_madn', 'edad_padn', 'ano_nac', 'mes_nac', 'escol_mad', 'escol_pad']
 correlacion = datosnat[variables].corr()
 covarianza = datosnat[variables].cov()
-correlacion.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natilidad2k18_correlacion.csv")
-covarianza.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natilidad2k18_covarianza.csv")
-
-#pega tus graficos luis , no se registro ala mejor por eso no se ve
-
-#luis comio pito aqui
-#ya se me antojo xddd
-#ya no tiene con quien jugar
+correlacion.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natalidad2k18_correlacion.csv")
+covarianza.to_csv("C:/Users/Csera/Documents/DinoDev_data/PyProjects/natalidad2k18_covarianza.csv")
