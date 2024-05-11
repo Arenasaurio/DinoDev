@@ -1,0 +1,11 @@
+C:\Users\Csera\DinoDev\RsProjects\crustacean\target\debug\deps\libtextwrap-d873c4b12c1a73c2.rmeta: C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs
+
+C:\Users\Csera\DinoDev\RsProjects\crustacean\target\debug\deps\libtextwrap-d873c4b12c1a73c2.rlib: C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs
+
+C:\Users\Csera\DinoDev\RsProjects\crustacean\target\debug\deps\textwrap-d873c4b12c1a73c2.d: C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs
+
+C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs:
+C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs:
+C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs:
+C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs:
+C:\Users\Csera\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs:
