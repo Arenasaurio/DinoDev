@@ -1,0 +1,3 @@
+C:/Users/Csera/DinoDev/CProjects/empt1/cmake-build-debug/CMakeFiles/empt1.dir
+C:/Users/Csera/DinoDev/CProjects/empt1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Csera/DinoDev/CProjects/empt1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

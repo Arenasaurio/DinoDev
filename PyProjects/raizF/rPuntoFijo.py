@@ -53,7 +53,7 @@ while errR>(1.2*notCien):
 
 
 plt.plot(x_vals, y_vals, label='f(x)=x^2/16 -6')
-plt.scatter(xi_vals, np.vectorize(evaluateEfe)(xi_vals), color='red', label='Puntos medios')
+plt.scatter(xi_vals, np.vectorize(evaluateEfe, xi_vals), color='red', label='Puntos medios')
 plt.legend([f'Con raíz aprox en: {xi_vals[-1]:.4f}'])
 plt.figure()
 plt.plot(range(1,len(eR_vals)+1), eR_vals, label=f'Con error minimo en la iteración:{len(eR_vals)}')

@@ -1,41 +1,57 @@
 import numpy as np
 
 
-def yprima(x,y):
+def f(x,y):
     #return(-3*x)+(2*y)-5
     return 2*np.e**x*np.cos(y)
 
 def euler(x, y, h):
-    yp1=y+(h*yprima(x,y))
+    yp1=y+(h*f(x,y))
     return yp1
 
-def rungekutta2(x, y, h):
-    k1=yprima(x,y)
-    k2=yprima(x+(0.5*h),y+(0.5*k1*h))
+def rk2(x, y, h):
+    k1=f(x,y)
+    k2=f(x+(0.5*h),y+(0.5*k1*h))
     yp1=y+(k2*h)
     return yp1
 
-def rungekutta3(x, y, h):
-    k1=yprima(x,y)
-    k2=yprima(x+(0.5*h),y+(0.5*k1*h))
-    k3=yprima(x+h, y-(k1*h)+(2*k2*h))
+def rk3(x, y, h):
+    k1=f(x,y)
+    k2=f(x+(0.5*h),y+(0.5*k1*h))
+    k3=f(x+h, y-(k1*h)+(2*k2*h))
     yp1=y+((k1+(4*k2)+k3)/6*h)
     return yp1
 
-def rungekutta4(x, y, h):
-    k1=yprima(x, y)
-    k2=yprima(x+(0.5*h),y+(0.5*k1*h))
-    k3=yprima(x+(0.5*h),y+(0.5*k2*h))
-    k4=yprima(x+h,y+(h*k3))
+def rk4(x, y, h):
+    k1=f(x, y)
+    k2=f(x+(0.5*h),y+(0.5*k1*h))
+    k3=f(x+(0.5*h),y+(0.5*k2*h))
+    k4=f(x+h,y+(h*k3))
     yp1=y+((h/6)*(k1+(2*k2)+(2*k3)+k4))
     return yp1
 
-def rungekutta5(x, y, h):
-    k1=yprima(x, y)
-    k2=yprima(x+(0.25*h),y+(0.25*k1*h))
-    k3=yprima(x+(0.25*h),y+(0.125*k1*h)+(0.125*k2*h))
-    k4=yprima(x+(0.5*h),y-(0.5*k2*h)+k3*h)
-    k5=yprima(x + (0.75*h), y + (0.1875*k1*h) + (0.5625*k4*h))
-    k6=yprima(x + h,y - (3/7*k1*h) + (2/7*k2*h) + (12/7*k3*h) - (12/7*k4*h) + (8/7*k3*h))
+def rk5(x, y, h):
+    k1=f(x, y)
+    k2=f(x+(0.25*h),y+(0.25*k1*h))
+    k3=f(x+(0.25*h),y+(0.125*k1*h)+(0.125*k2*h))
+    k4=f(x+(0.5*h),y-(0.5*k2*h)+k3*h)
+    k5=f(x + (0.75*h), y + (0.1875*k1*h) + (0.5625*k4*h))
+    k6=f(x + h,y - (3/7*k1*h) + (2/7*k2*h) + (12/7*k3*h) - (12/7*k4*h) + (8/7*k3*h))
     ypp1=y+(1/90*(7*k1 + 32*k3 + 12*k4 + 32*k5 + 7*k6)*h)
     return ypp1
+
+def rkf(x, y, h):
+    k1=f(x, y)
+    k2=f(x+(0.2*h), y+(0.2*k1*h))
+    k3=f(x+(0.3*h), y+(0.075*k1*h)+(0.225*k2*h))
+    k4=f(x+(0.6*h), y+(0.3*k1*h)-(0.9*k2*h)+(1.2*k3*h))
+    k5=f(x+(h), y-(0.203703703703704*k1*h)+(2.5*k2*h)-(2.59259259259259*k3*h)+(1.2962962962963*k4*h))
+    k6=f(x+(0.875*h), y+(0.0294958043981481*k1*h)+(0.341796875*k2*h)+(0.0415943287037037*k3*h)+(0.400345413773148*k4*h)+(0.061767578125*k5*h))
+    ypp1=y+(h*((0.0978835978835979*k1)+(0.402576489533011*k3)+(0.21043771043771*k4)+(0.28910220214568*k6)))
+    ypp2=y+(h*((0.102177372685185*k1)+(0.428153236216117*k3)+(0.244592737268519*k4)+(0.0193219866071429*k5)+(0.25*k6)))
+    return ypp1, ypp2
+
+def rkf45(x, y, h):
+    ypp1=y
+    ypp2=y
+    return ypp1, ypp2
