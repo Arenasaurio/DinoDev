@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1715297306 source:c:\users\csera\dinodev\cprojects\pruebauno\main.c
+1715473166 source:c:\users\csera\dinodev\cprojects\pruebauno\main.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 

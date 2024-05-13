@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <time.h>
 /**
- * @brief Estructura para representar un punto en un plano 2D.
+ * @brief Estructura para representar un punto en un plano xy
  * @param x Coordenada x del punto.
  * @param y Coordenada y del punto.
  * @param next Puntero al siguiente punto en la lista.
@@ -116,20 +116,32 @@ void print_points(point* head) {
  * @brief Función principal que agrega puntos de rectángulos a una lista, elimina duplicados y los imprime.
  * @return 0 si el programa se ejecuta correctamente.
  */
+
 int main() {
-    //Lista ligada simple
+    // Semilla para los aleatorios
+    srand(time(NULL));
+
+    // Lista ligada simple
     point* head = NULL;
-    int n, x1, y, x2, max_x2 = 0;
+    int n, max_x2 = 0;
 
     printf("Ingrese el número de rectángulos: ");
     scanf("%d", &n);
+
+    // Crear una matriz para almacenar los valores de x1, y, x2
+    int rectangulos[n][3];
     for (int i = 0; i < n; i++) {
-        printf("Ingrese x1, y, x2 para el rectángulo %d: ", i+1);
-        scanf("%d %d %d", &x1, &y, &x2);
-        head = add_rectangle_points(head, x1, y, x2-1);
-        if (x2 > max_x2) {
-            max_x2 = x2;
+        rectangulos[i][0] = rand() %10 +1; // x1
+        rectangulos[i][2] = rectangulos[i][0] + (rand() % (20-rectangulos[i][0])); // x2
+        rectangulos[i][1] = rand() %10 +1; // y
+        if (rectangulos[i][2] > max_x2) {
+            max_x2 = rectangulos[i][2];
         }
+    }
+    clock_t start = clock();
+    // Recorrer la matriz para añadir los puntos del rectángulo
+    for (int i = 0; i < n; i++) {
+        head = add_rectangle_points(head, rectangulos[i][0], rectangulos[i][1], rectangulos[i][2]-1);
     }
 
     // Agregar un rectángulo que vaya desde 0 hasta el x2 mayor
@@ -138,10 +150,15 @@ int main() {
     // Eliminar duplicados
     head = remove_duplicates(head);
 
+    clock_t end = clock();
+
+    // Calcular e imprimir el tiempo transcurrido en segundos
+    double elapsed_time = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Tiempo transcurrido en segundos: %.15f\n", elapsed_time);
+
     // Imprimir los puntos de la lista
     print_points(head);
 
     return 0;
 }
-
 
